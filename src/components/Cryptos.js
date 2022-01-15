@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  Modal,
   Table,
   Button,
   Select,
@@ -11,6 +12,21 @@ const { Option } = Select;
 const { Title } = Typography;
 
 const Cryptocurrencies = () => {
+  //set modal start
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+    //set modal end
 
 const columns = [
   {
@@ -40,7 +56,8 @@ const columns = [
       key: "id",
       render: (text, record) => (
         <>
-      <Button type="primary">
+        {/* onclick showModal to open modal */}
+     <Button type="primary" onClick={showModal}>
         More
       </Button>
         </>
@@ -133,6 +150,25 @@ const data = [
           bordered
           size="small"
       />
+      <Modal
+ title="Bitcoin" 
+ visible={isModalVisible}
+  onOk={handleOk} 
+  onCancel={handleCancel}
+
+    footer={[
+            <Button key="back" onClick={handleCancel}>
+              Cancel
+            </Button>,
+           
+          ]}
+        >
+
+ 
+
+  
+
+      </Modal>
 
       </div>
     )
