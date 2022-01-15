@@ -45,6 +45,28 @@ const columns = [
         </>
       ),
     },
+    //click Add to watch list button
+    {
+      title: "Watch List",
+      key: "watchlist",
+      render: (text, record) => (
+        <>
+        {/* <Button disabled
+        icon={<HeartTwoTone twoToneColor="red" style={{ fontSize: "18px" }} />}
+        key="watchlist"
+        >
+        Added to Watch List
+      </Button>   */}
+
+      <Button
+       key="watchlist"     
+       >
+      Add to Watch List
+      </Button>
+
+        </>
+      ),
+    },
    
 
 ];
