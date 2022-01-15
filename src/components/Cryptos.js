@@ -5,6 +5,7 @@ import {
   Select,
   Typography
 } from "antd";
+import { HeartTwoTone } from "@ant-design/icons";
 
 const { Option } = Select;
 const { Title } = Typography;
@@ -59,6 +60,8 @@ const columns = [
       </Button>   */}
 
       <Button
+       //heart icon 
+      icon={<HeartTwoTone style={{ fontSize: "18px" }} />}
        key="watchlist"     
        >
       Add to Watch List
