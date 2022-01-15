@@ -4,13 +4,15 @@ import {
   Table,
   Button,
   Select,
+  Collapse,
   Typography
 } from "antd";
 import { HeartTwoTone } from "@ant-design/icons";
 
 const { Option } = Select;
 const { Title } = Typography;
-
+const { Panel } = Collapse;
+const text = `Bitcoin`;
 const Cryptocurrencies = () => {
   //set modal start
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -168,12 +170,38 @@ const data = [
              //  Add to portifolio button end
           ]}
         >
-
- 
-
-  
-
-      </Modal>
+     {/* Collapse start*/}
+    <Collapse accordion>
+    <Panel header="Name" key="1">
+      <p>{text}</p>
+    </Panel>
+    <Panel header="Symbol" key="2">
+      <p>BTC</p>
+    </Panel>
+    <Panel header="Price" key="3">
+      <p>43082.92815115548</p>
+    </Panel>
+    <Panel header="Total Supply" key="4">
+      <p>18929643</p>
+    </Panel>
+    <Panel header="Market Cap" key="5">
+      <p>815544449296.0233</p>
+    </Panel>
+    <Panel header="Circulating Supply" key="6">
+      <p>18929643</p>
+    </Panel>
+    <Panel header="24h Volume" key="7">
+      <p>23178537484.093624</p>
+    </Panel>
+    <Panel header="Last Updated" key="8">
+      <p>2022-01-15T03:00:00.000Z</p>
+    </Panel>
+    <Panel header="Price Rank" key="9">
+      <p>1</p>
+    </Panel>
+  </Collapse>,
+ {/* Collapse end*/}
+  </Modal>
  {/* modal that will display more info about cryptocurrency end*/}
       </div>
     )
