@@ -4,6 +4,8 @@ import {
   Table,
   Button,
   Select,
+  InputNumber,
+  Form,
   Collapse,
   Typography
 } from "antd";
@@ -201,6 +203,38 @@ const data = [
     </Panel>
   </Collapse>,
  {/* Collapse end*/}
+
+  {/* form with 2 inputs Enter number of coins and enter price of any asset start*/}
+
+  {/* <Form.Item label="Number of coins" style={{ marginTop: "10px" }}>
+    <InputNumber
+      value="4"  
+    />
+  </Form.Item>
+
+    <Form.Item label="Enter price"style={{ marginTop: "10px" }}>
+      <InputNumber 
+        value="5"  
+      />
+    </Form.Item> */}
+    <Form
+    name="update"
+    autoComplete="off"
+    >
+    <label style={{ marginRight: "15px" }}>Number of coins:</label>
+    <InputNumber
+      style={{ marginRight: "15px" }}
+      min={1}
+      value="4" 
+    />
+    <label style={{ marginRight: "15px" }}>Price per coins:</label>
+    <InputNumber
+      min={1}
+      value="5"
+    />
+    </Form>
+     {/* form with 2 inputs Enter number of coins and enter price of any asset  end*/}
+
   </Modal>
  {/* modal that will display more info about cryptocurrency end*/}
       </div>
