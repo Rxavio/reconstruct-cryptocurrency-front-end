@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Table,
+  Button,
   Select,
   Typography
 } from "antd";
@@ -31,6 +32,20 @@ const columns = [
     dataIndex: "coins",
     key: "coins",
 },
+
+//click more button to display crypto information
+ {
+      title: "Action",
+      key: "id",
+      render: (text, record) => (
+        <>
+      <Button type="primary">
+        More
+      </Button>
+        </>
+      ),
+    },
+   
 
 ];
 
@@ -75,7 +90,7 @@ const data = [
         <Title level={4}>
           Latest cryptocurrencies
         </Title>
-
+        {/* Select to switch from one currency to another */}
         <Select
           defaultValue="USD"
           style={{ width: 120 }}
@@ -86,7 +101,7 @@ const data = [
         </Select>
       </div>
 
-
+  {/* table to display crypto asset data */}
       <Table
           columns={columns}
           dataSource={data}
