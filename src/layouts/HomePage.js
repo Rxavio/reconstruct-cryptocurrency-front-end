@@ -50,12 +50,12 @@ class HomePage extends React.Component {
               </Link>
             </Menu.Item>
 
-            <Menu.Item key='4'>
+            {/* <Menu.Item key='4'>
               <Link to='/chart'>
               <AccountBookOutlined />
                 <span>Chart</span>
               </Link>
-            </Menu.Item>
+            </Menu.Item> */}
 
           </Menu>
         </Sider>
