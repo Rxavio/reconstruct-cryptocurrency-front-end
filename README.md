@@ -8,9 +8,9 @@ Cryptocurrency Market Info &amp; Asset Tool
 - Open project in vs code and run `npm install`
 - Then, run `npm start`
 
-### Remote
+<!-- ### Remote
 - Open [this link](https://amalitechcryto.netlify.app/)
-##
+## -->
 
 ## Features
 
@@ -23,4 +23,4 @@ Cryptocurrency Market Info &amp; Asset Tool
 7. Switch Currency
 8. Watch list
 
-Visit through https://amalitechcryto.netlify.app/
+<!-- Visit through https://amalitechcryto.netlify.app/ -->
