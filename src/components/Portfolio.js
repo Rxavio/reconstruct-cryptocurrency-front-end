@@ -5,6 +5,7 @@ import {
   Button,
   InputNumber,
   Form,
+  Card,
   Row,
   Col,
   Typography,
@@ -127,6 +128,13 @@ const data1 = [
     <Row align="top">
       
         <Col xs={24} sm={24} >
+
+           {/* card to display total asset price start*/}
+        <Card style={{ width: 300, marginBottom: "10px" }}>
+            <p><b>Total Price:</b> $90000</p>
+          </Card>
+          {/* card to display total asset price start*/}
+          
            {/* table to display crypto asset data start*/}
           <Table
             columns={columns}
