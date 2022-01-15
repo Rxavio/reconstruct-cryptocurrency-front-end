@@ -87,8 +87,6 @@ const columns = [
         </>
       ),
     },
-   
-
 ];
 
 
@@ -150,17 +148,24 @@ const data = [
           bordered
           size="small"
       />
+       {/* modal that will display more info about cryptocurrency start*/}
       <Modal
- title="Bitcoin" 
- visible={isModalVisible}
-  onOk={handleOk} 
-  onCancel={handleCancel}
-
+    title="Bitcoin" 
+    visible={isModalVisible}
+      onOk={handleOk} 
+      onCancel={handleCancel}
     footer={[
             <Button key="back" onClick={handleCancel}>
               Cancel
             </Button>,
-           
+            //  Add to portifolio button start
+              <Button
+              key="Submit"
+              type="primary"
+            >
+              Add to portifolio
+            </Button>,
+             //  Add to portifolio button end
           ]}
         >
 
@@ -169,7 +174,7 @@ const data = [
   
 
       </Modal>
-
+ {/* modal that will display more info about cryptocurrency end*/}
       </div>
     )
 }
