@@ -11,6 +11,7 @@ import {
   Typography,
 } from "antd";
 import { EditOutlined } from "@ant-design/icons";
+import { Pie } from "@ant-design/plots";
 
 const { Title } = Typography;
 
@@ -117,8 +118,48 @@ const data1 = [
     profit: '0.001',
   },
 ];
- //  set table columns data end
+ //  set table columns data 
+ 
+  //  set crypto data to be displayed on pie chart start
+const data = [
+  {
+    type: 'Bitcoin',
+    value: 27,
+  },
+  {
+    type: 'Etherium',
+    value: 25,
+  },
+  {
+    type: 'Cardano',
+    value: 10,
+  }
+];
+//  set crypto data to be displayed on pie chart end
 
+// set pie chart start
+const config = {
+  appendPadding: 10,
+  data,
+  angleField: 'value',
+  colorField: 'type',
+  radius: 0.9,
+  label: {
+    type: 'inner',
+    offset: '-30%',
+    content: ({ percent }) => `${(percent * 100).toFixed(0)}%`,
+    style: {
+      fontSize: 14,
+      textAlign: 'center',
+    },
+  },
+  interactions: [
+    {
+      type: 'element-active',
+    },
+  ],
+};
+// set pie chart end
     return (
         <div>
     <Title level={3} style={{ margin: "10px 0 15px" }}>
@@ -133,8 +174,8 @@ const data1 = [
         <Card style={{ width: 300, marginBottom: "10px" }}>
             <p><b>Total Price:</b> $90000</p>
           </Card>
-          {/* card to display total asset price start*/}
-          
+          {/* card to display total asset price end*/}
+
            {/* table to display crypto asset data start*/}
           <Table
             columns={columns}
@@ -144,7 +185,16 @@ const data1 = [
           />
            {/* table to display crypto asset data end */}
         </Col>
-       
+        {
+           // display pie chart start
+          <Col xs={24} sm={24} md={8}>
+            <Title level={5} type="primary" style={{ textAlign: "left" }}>
+              Assets vs Total Value(USD)
+            </Title>
+            <Pie {...config} />
+          </Col> 
+           // display pie chart end
+        }
       </Row>
 
   {/* modal start */}
