@@ -1,4 +1,6 @@
 # cryptocurrency
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/e7049bda-3557-4bef-af2a-f866f7634446/deploy-status)](https://app.netlify.com/sites/crypto-front-end/deploys)
+<br/>
 Cryptocurrency Market Info &amp; Asset Tool
 ##
 
